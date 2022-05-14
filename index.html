@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The landing page of a website that sells shoes.">
+  <title>E-commerce Product Page</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main>
+    <nav>
+      <div class="menu"></div>
+        <div class="logo"></div>
+        <a href="#" class="nav-items collections">Collections</a>
+        <a href="#" class="nav-items">Men</a>
+        <a href="#" class="nav-items">Women</a>
+        <a href="#" class="nav-items">About</a>
+        <a href="#" class="nav-items">Contact</a>
+      <div class="shopping-cart"></div>
+      <div class="avatar"></div>
+      <span class="items-in-cart">0</span>
+    </nav>
+    <hr class="first-hr" />
+    <div class="container">
+      <div class="prev-btn" onClick="plusSlides(-1)"><img class="prev-img" src="images/icon-previous.svg" alt="Previous image icon"></div>
+      <div class="next-btn" onclick="plusSlides(1)"><img class="next-img" src="images/icon-next.svg" alt="Next image icon"></div>
+      <div class="mySlides fade">
+        <img class="image" onClick="openModal2();" src="images/image-product-1.jpg" alt="Picture of the shoes on display">
+      </div>
+      <div class="mySlides fade">
+        <img class="image" onClick="openModal2();" src="images/image-product-2.jpg" alt="Picture of the shoes on display">
+      </div>
+      <div class="mySlides fade">
+        <img class="image" onClick="openModal2();" src="images/image-product-3.jpg" alt="Picture of the shoes on display">
+      </div>
+      <div class="mySlides fade">
+        <img class="image" onClick="openModal2();" src="images/image-product-4.jpg" alt="Picture of the shoes on display">
+      </div>
+      <div class="product-thumbnails">
+        <img class="thumbnail" onclick="currentSlide(1)" src="images/image-product-1-thumbnail.jpg" alt="Thumbnail of the pair of shoes">
+        <img class="thumbnail" onclick="currentSlide(2)" src="images/image-product-2-thumbnail.jpg" alt="Thumbnail of the pair of shoes">
+        <img class="thumbnail" onclick="currentSlide(3)" src="images/image-product-3-thumbnail.jpg" alt="Thumbnail of the pair of shoes">
+        <img class="thumbnail" onclick="currentSlide(4)" src="images/image-product-4-thumbnail.jpg" alt="Thumbnail of the pair of shoes">
+      </div>
+    </div>
+    <div class="modal-2">
+      <div class="modal-2-contents">
+        <img class="modal-close" src="images/icon-close.svg">
+        <div class="modal-prev-btn" onClick="plusSlides(-1)"><img class="modal-prev-img" src="images/icon-previous.svg"></div>
+        <div class="modal-next-btn" onclick="plusSlides(1)"><img class="modal-next-img" src="images/icon-next.svg"></div>
+        <img class="modal-img" src="images/image-product-1.jpg" alt="">
+        <img class="modal-img" src="images/image-product-2.jpg" alt="">
+        <img class="modal-img" src="images/image-product-3.jpg" alt="">
+        <img class="modal-img" src="images/image-product-4.jpg" alt="">
+        <div class="modal-thumbnails">
+          <img class="modal-thumbnail" onclick="currentSlide(1)" src="images/image-product-1-thumbnail.jpg" alt="">
+          <img class="modal-thumbnail" onclick="currentSlide(2)" src="images/image-product-2-thumbnail.jpg" alt="">
+          <img class="modal-thumbnail" onclick="currentSlide(3)" src="images/image-product-3-thumbnail.jpg" alt="">
+          <img class="modal-thumbnail" onclick="currentSlide(4)" src="images/image-product-4-thumbnail.jpg" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="modal">
+      <div class="modal-content">
+        <img src="images/icon-close.svg" class="close">
+        <a href="#">Collections</a>
+        <a href="#">Men</a>
+        <a href="#">Women</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </div>
+    </div>
+    <div class="shopping-cart-modal">
+      <div class="cart-contents">
+        <p class="title">Cart</p>
+        <hr />
+        <p class="cart-text">Your cart is empty.</p>
+        <div class="cart-interior">  
+          <div class="shoes-in-cart">
+            <img class="shoes" src="images/image-product-1-thumbnail.jpg" alt="">
+            <p class="shoes-desc">Autumn Limited Edition...</p>
+          </div>
+          <p class="pricing">$125.00 x <span class="item-number">0</span><span class="total">$0</span></p>
+          <button class="checkout">Checkout</button>
+          <img class="delete" src="images/icon-delete.svg">
+        </div>
+      </div>
+    </div>
+    <div class="main-text">
+      <div class="page">
+        <p class="header">SNEAKER COMPANY</p>
+        <h1>Fall Limited Edition Sneakers</h1>
+        <p class="description">These low-profile sneakers are your perfect casual wear companion. Featuring a 
+          durable rubber outer sole, they’ll withstand everything the weather can offer.</p>  
+      </div>
+      <p class="current-price">$125.00</p>  
+      <p class="half-off">50%</p>
+      <p class="orig-price">$250.00</p>
+      <div class="items-select">
+        <button class="minus" aria-label="Adds items to cart"><img class="minus-icn" src="images/icon-minus.svg" alt="Add icon"></button>
+        <p class="num-of-items">0</p>
+      </div>
+      <button class="plus" aria-label="Takes items off of the cart"><img class="plus-icn" src="images/icon-plus.svg" alt="Subtract icon"></button>
+      <button class="add-to"><span class="add-to-text">Add to cart</span></button>
+    </div>
+  </main>
+</body>
+<script src="scripts.js"></script>
+</html>
